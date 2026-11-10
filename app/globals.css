@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --tg-bg: #ffffff;
+    --tg-sidebar-bg: #ffffff;
+    --tg-chat-bg: #8c9096;
+    --tg-surface: #f4f4f5;
+    --tg-surface-hover: #f0f2f5;
+    --tg-surface-active: #e4e7eb;
+    --tg-primary: #2481cc;
+    --tg-primary-hover: #1c6fad;
+    --tg-primary-light: #e3effa;
+    --tg-incoming-bubble: #ffffff;
+    --tg-outgoing-bubble: #eeffde;
+    --tg-text: #000000;
+    --tg-text-secondary: #707579;
+    --tg-text-muted: #8c959f;
+    --tg-border: #dfe1e5;
+    --tg-unread: #2481cc;
+    --tg-online: #34c759;
+    --tg-pinned: #2481cc;
+    --tg-shadow: 0 1px 2px rgba(16, 35, 47, 0.15);
+  }
+
+  .dark {
+    --tg-bg: #17212b;
+    --tg-sidebar-bg: #17212b;
+    --tg-chat-bg: #0e1621;
+    --tg-surface: #242f3d;
+    --tg-surface-hover: #2b3847;
+    --tg-surface-active: #324153;
+    --tg-primary: #5288c1;
+    --tg-primary-hover: #4374a9;
+    --tg-primary-light: #1e2c3a;
+    --tg-incoming-bubble: #182533;
+    --tg-outgoing-bubble: #2b5278;
+    --tg-text: #f5f5f5;
+    --tg-text-secondary: #7f91a4;
+    --tg-text-muted: #67788a;
+    --tg-border: #0f1720;
+    --tg-unread: #5288c1;
+    --tg-online: #4fae4e;
+    --tg-pinned: #5288c1;
+    --tg-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--tg-bg);
+  color: var(--tg-text);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+}
+
+/* Telegram Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 130, 140, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 130, 140, 0.5);
+}
+
+/* Telegram Subtle Doodle Chat Wallpaper Background */
+.tg-chat-pattern {
+  background-color: var(--tg-chat-bg);
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0, 0, 0, 0.02) 35px, rgba(0, 0, 0, 0.02) 70px);
+}
+
+.dark .tg-chat-pattern {
+  background-color: var(--tg-chat-bg);
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(82, 136, 193, 0.03) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0, 0, 0, 0.04) 35px, rgba(0, 0, 0, 0.04) 70px);
+}
+
+/* Smooth transitions */
+.tg-transition {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}

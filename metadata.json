@@ -1,0 +1,8 @@
+{
+  "name": "Telegram Web",
+  "description": "High-fidelity Telegram Web and Desktop messaging application featuring real-time chats, groups, voice/video calls UI, media sharing, Cloud SQL persistence, Firebase authentication, and AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
